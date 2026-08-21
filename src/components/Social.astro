@@ -1,0 +1,59 @@
+---
+import { library, icon, type IconName, type IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { faGithub, faBluesky, faDev } from "@fortawesome/free-brands-svg-icons";
+library.add(faGithub, faBluesky, faDev);
+
+interface IconItem {
+	iconName: IconName,
+	target: string,
+	icon: IconDefinition,
+	aria: string,
+}
+
+const iconItems: IconItem[] = [
+	{
+		iconName: "bluesky",
+		target: "https://bsky.app/profile/krisztinazavecz.com",
+		icon: faBluesky,
+		aria: "follow me on bluesky",
+	},
+	{
+		iconName: "github",
+		target: "https://github.com/zkriszti",
+		icon: faGithub,
+		aria: "my github account",
+	},
+	{
+		iconName: "dev",
+		target: "https://dev.to/zkriszti",
+		icon: faDev,
+		aria: "follow me on dev.to",
+	},
+]
+
+const generateIconHtml = (iconName: IconName) => {
+  const iconSvg = icon({ prefix: 'fab', iconName }).html;
+  return iconSvg[0];
+}
+---
+<div class="social">
+	{iconItems && iconItems.map((item) => (<a
+		href={item.target}
+		target="_blank"
+	>
+		<Fragment set:html={generateIconHtml(item.iconName)} />
+	</a>))}
+</div>
+
+<style lang="stylus">
+a
+	line-height: 0
+	margin-right: 10px
+	display: inline-flex
+	:global(svg)
+		width: 20px
+		height: 20px
+		:global(path),
+		&:visited :global(path)
+			fill: #eee
+</style>

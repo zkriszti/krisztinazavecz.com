@@ -1,0 +1,33 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+    <main class="app-inner">
+      <div>Layout</div>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style lang="stylus">
+body
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  max-width: 100%
+  margin:0
+  padding:0
+  line-height: 1.5
+  color: #444
+  box-sizing: border-box
+  main
+    max-width: clamp(280px, calc(100% - 2em), 1200px)
+    margin: 0 auto 40px auto
+    padding: 0 20px
+</style>
