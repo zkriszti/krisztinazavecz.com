@@ -42,6 +42,7 @@ const generateIconHtml = (iconName: IconName) => {
 		target="_blank"
 	>
 		<Fragment set:html={generateIconHtml(item.iconName)} />
+		<span class="sr-only">{item.aria}</span>
 	</a>))}
 </div>
 

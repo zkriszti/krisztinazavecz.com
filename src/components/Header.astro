@@ -21,6 +21,7 @@ const generateIconHtml = (iconName: IconName) => {
 			</a>
 			<a href="feed://krisztinazavecz.com/rss.xml" class="rss-icon">
 				<Fragment set:html={generateIconHtml("rss")} />
+				<span class="sr-only">RSS feed</span>
 			</a>
 		</div>
 		<Social />
