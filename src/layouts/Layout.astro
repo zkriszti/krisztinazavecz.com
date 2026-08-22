@@ -2,7 +2,14 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+interface Props {
+  pageTitle: string;
+}
+
+const { pageTitle } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -11,7 +18,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
     <main class="app-inner">
-      <div>Layout</div>
+      <h1>{pageTitle}</h1>
       <slot />
     </main>
   </body>
@@ -26,7 +33,7 @@ body
   color: #444
   box-sizing: border-box
   main
-    max-width: clamp(280px, calc(100% - 2em), 1200px)
+    max-width: clamp(280px, calc(100% - 2em), 60rem)
     margin: 0 auto 40px auto
     padding: 0 20px
     h1

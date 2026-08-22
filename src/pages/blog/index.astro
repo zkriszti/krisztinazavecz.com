@@ -1,7 +1,4 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Layout from '../../layouts/Layout.astro';
@@ -12,8 +9,7 @@ const posts = (await getCollection('blog')).sort(
 );
 
 ---
-<Layout>
-  <div>this is the blog list</div>
+<Layout pageTitle='Blog'>
   <ul>
     {
       posts.map((post) => (
@@ -33,7 +29,7 @@ const posts = (await getCollection('blog')).sort(
   </ul>
 </Layout>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .matched-radius {
     --matched-radius-padding: 16px; // card-padding
     --matched-radius-inner-size: 8px; // image padding

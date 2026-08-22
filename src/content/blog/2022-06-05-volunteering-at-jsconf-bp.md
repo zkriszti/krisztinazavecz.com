@@ -26,7 +26,7 @@ My weeks in April 2019 mostly consisted of attending job interviews, talking to 
 
 Fast forward some days, things started to clear up: I had two job offers to choose from, and started at one of them on the 6th of May. Two days later, in the afternoon, I still remember standing at the kitchen counter doing some household chore, when my phone beeped:
 
-![JSConf EU messaged me about finally accepting my scholarship request to CSSConf and JSConf EU 2019](../media/scolarship_notification.png){ class="bordered-img" }
+![JSConf EU messaged me about finally accepting my scholarship request to CSSConf and JSConf EU 2019](../media/scolarship_notification.png)
 
 Wow, an almost last-minute scolarship to JSConf EU! :D :D I’ll be flying to Berlin, wooohoo! Needless to say, I was over the moon. Onboarding at the new job in the morning, getting a scolarship in the afternoon, could I have asked for more career-wise at that time? I literally wanted to hug the universe for being so kind to me!
 
