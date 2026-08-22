@@ -8,30 +8,39 @@ const currentPath = Astro.url.pathname;
 const inactivePages = menuItems.filter(item => item.target !== currentPath);
 ---
 <nav>
-  {inactivePages && inactivePages.map(p => (
-    <a class:list={{ "nav__link": true, "is-active": p.target === currentPath }} href={p.target} >
-    { p.name }
+  {menuItems.map(p => (
+    <a
+      class:list={{
+        "nav__link": true,
+        "is-currently-active-page": p.target === currentPath }}
+      href={p.target}
+    >
+      { p.name }
     </a>
   ))}
 </nav>
 
-<style lang="stylus">
-nav
-  justify-self: end
-  display: flex
+<style>
+nav{
+  justify-self: end;
+  display: flex;
+}
 
-  a
-    text-decoration: none
-    @css {
-      background-color: rgb(var(--gray-light));
-    }
-    color: #446189
-    font-weight: bold
-    text-transform: lowercase
-    margin-left: 2px
-    padding: 4px 12px
-    border-radius: 4px 4px 0 0
-    display: flex
-    &.is-active
-      color: grey
+a {
+    text-decoration: none;
+    background-color: rgb(var(--gray-light));
+    color: #446189;
+    font-weight: 300;
+    text-transform: lowercase;
+    margin-left: 2px;
+    padding: 4px 12px;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+}
+
+.is-currently-active-page {
+    font-weight: 700;
+    cursor: auto;
+    pointer-events: none;
+}
 </style>

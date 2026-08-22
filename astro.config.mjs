@@ -15,7 +15,7 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
       name: "Comfortaa",
       cssVariable: "--font-heading",
-      weights: [400, 700],
+      weights: [300, 400, 700],
       subsets: ["latin", "latin-ext"],
     },
     {
