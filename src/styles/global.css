@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: "Atkinson", sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
   text-align: left;
@@ -31,8 +31,6 @@ body {
   max-width: 100;
 }
 main {
-  /* width: 900px; */
-  /* max-width: calc(100% - 2em); */
   margin: auto;
   padding: 3em 1em;
 }
@@ -42,6 +40,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-heading);
   margin: 0 0 0.5rem 0;
   color: rgb(var(--black));
   line-height: 1.2;
