@@ -1,7 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 ---
 
-<Layout>
-	<div>about me</div>
+<Layout pageTitle='Get to know me'>
+	<div>
+			<p><strong>I'm a Frontend Developer with a love for front-of-the-frontend.</strong> While working with modern frameworks both at my day-job (React and its ecosystem) and on my side projects (Vue, mostly), the one field that amazes me most is definitely CSS and the way it allows us to ship less JavaScript with each passing day.</p>
+      <section class="about-me">
+        <Image alt="Krisztina Závecz" src={imgReference_zk} width="135" />
+        <ul class="likes-list">
+          <li><span>I love creating. I find joy in revealing pieces of knowledge I haven't had before.</span></li>
+          <li><span>I love the feeling of finally resolving a bug. :)</span></li>
+          <li><span>I love CSS.</span></li>
+					<li><span>I care about accessibility.</span></li>
+        </ul>
+      </section>
+      <section class="tech-current">
+				<p><strong>I believe we, as developers, are more than just our current tech stacks.</strong> But if you came here for this:</p>
+        <h2 class="small-heading">My current technology stack includes the following technologies:</h2>
+        <ul>
+          <li>Frontend frameworks: React / Vue and their ecosystems</li>
+					<li>...with keeping the "principle of least power" in mind: strong foundations in HTML5 - CSS3 - vanilla JavaScript</li>
+					<li>git / GitHub / GitLab for version control</li>
+					<li>Working literacy of modern CI / CD pipelines</li>
+        </ul>
+      </section>
+			<section class="tech-ai">
+				<h2 class="small-heading">My current approach with AI:</h2>
+				<p>I need and will still need to put food on the table in the upcoming years as well, so I'm indeed getting acquainted with LLM-assisted / agentic workflows. I'm using them a rather conservative way, which, <em>besides consciously not outsourcing my thinking to an agent</em>, means:</p>
+				<ul>
+					<li>I follow a strict approach: <strong>I never commit code written by AI that I do not understand. </strong> This also implies that I'm always reading the code I commit.</li>
+					<li>I'm not a native English speaker, so I occasionally use LLM-assistance for double-checking certain grammar structures or wording choices. Never feeding it a whole text for re-working or letting it be creative for me.</li>
+					<li>You will not see AI-generated posts on this page.</li>
+				</ul>
+			</section>
+    </div>
 </Layout>
+
+<style lang="stylus" scoped>
+	.section
+		margin-block: 2em
+	.about-me
+		border-radius: 6px
+		background: #eee
+		padding: 6px 12px
+		box-shadow: 2px 2px 5px 0px #44618999
+		@media screen and (min-width: 400px)
+			display: grid
+			grid-template-columns: 135px auto
+		@media screen and (min-width: 568px)
+			align-items: center
+
+	h2.small-heading
+		font-size: 1em
+		font-family: var(--font-body)
+		margin-block: 1em
+		color: #444
+
+	.likes-list
+		list-style-type: none
+
+	li
+		padding-left: 20px
+		margin-bottom: 8px
+
+	.likes-list li
+		display: flex
+
+	.likes-list span
+		align-self: center
+
+	.likes-list li:before
+		content: ''
+		display: block
+		min-width: 30px
+		min-height: 30px
+		background-image: url("./media/icons8-heart.svg?url")
+		background-repeat: no-repeat
+		margin-right: 15px
+</style>
