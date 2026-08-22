@@ -9,7 +9,7 @@ const posts = (await getCollection('blog')).sort(
 );
 
 ---
-<Layout pageTitle='Blog'>
+<Layout pageTitle='Blog' pageDescription='Blog by Krisztina Závecz | My thoughts on various topics related to frontend development'>
   <ul>
     {
       posts.map((post) => (
