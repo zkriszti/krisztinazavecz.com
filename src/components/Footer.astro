@@ -3,7 +3,8 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; 2019 - {today.getFullYear()} Krisztina Závecz. All rights reserved.
+	<p>&copy; 2019 - {today.getFullYear()} Krisztina Závecz. All rights reserved.</p>
+	<small>Icons by <a href="https://icons8.com">Icons8</a>, <a href="https://github.com/microsoft/fluentui-emoji">Fluent Emoji Flat</a> and <a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome Free</a>.</small>
 </footer>
 <style>
 	footer {
@@ -11,18 +12,11 @@ const today = new Date();
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
+		a:link,
+		a:visited,
+		a:hover,
+		a:active {
+			color: rgb(var(--gray);)
+		}
 	}
 </style>
