@@ -107,6 +107,12 @@ const posts = (await getCollection('blog')).sort(
         box-shadow: var(--card-hover-box-shadow);
       }
 
+      @media (prefers-reduced-motion: reduce) {
+        transition: box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
 </style>
