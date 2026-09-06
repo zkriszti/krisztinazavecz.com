@@ -6,12 +6,15 @@ import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 
 <Layout pageTitle='Get to know me' pageDescription='A personal website by Krisztina Závecz | Get to know me'>
 	<div>
-			<p><strong>I'm a Frontend Developer with a love for front-of-the-frontend.</strong> While working with modern frameworks both at my day-job (React and its ecosystem) and on my side projects (Vue, mostly), the one field that amazes me most is definitely CSS and the way it allows us to ship less JavaScript with each passing day.</p>
+			<p><strong>I'm a Frontend Developer with a love for front-of-the-frontend.</strong></p>
+			<section class="intro">
+				<p>While working with modern frameworks both at my day-job (React and its ecosystem + TypeScript) and on my side projects (Vue, mostly), the one field that amazes me most is definitely CSS and the way it allows us to ship less JavaScript with each passing day.</p>
+			</section>
       <section class="about-me">
         <Image alt="Krisztina Závecz" src={imgReference_zk} width="135" />
         <ul class="likes-list">
           <li><span>I love creating. I find joy in revealing pieces of knowledge I haven't had before.</span></li>
-          <li><span>I love the feeling of finally resolving a bug. :)</span></li>
+          <li class="bug"><span>I love the feeling of finally resolving a bug. :)</span></li>
           <li><span>I love CSS.</span></li>
 					<li><span>I care about accessibility.</span></li>
         </ul>
@@ -20,19 +23,19 @@ import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 				<p><strong>I believe we, as developers, are more than just our current tech stacks.</strong> But if you came here for this:</p>
         <h2 class="small-heading">My current technology stack includes the following technologies:</h2>
         <ul>
-          <li>Frontend frameworks: React / Vue and their ecosystems</li>
-					<li>...with keeping the "principle of least power" in mind: strong foundations in HTML5 - CSS3 - vanilla JavaScript</li>
+          <li>Frontend frameworks: React and its ecosystem for my day job, Vue for sideprojects</li>
+					<li>Solid foundations in HTML5 - CSS3 - JavaScript / TypeScript</li>
 					<li>git / GitHub / GitLab for version control</li>
 					<li>Working literacy of modern CI / CD pipelines</li>
         </ul>
       </section>
 			<section class="tech-ai">
 				<h2 class="small-heading">My current approach with AI:</h2>
-				<p>I need and will still need to put food on the table in the upcoming years as well, so I'm indeed getting acquainted with LLM-assisted / agentic workflows. I'm using them a rather conservative way, which, <em>besides consciously not outsourcing my thinking to an agent</em>, means:</p>
+				 <p>Besides consciously not outsourcing my thinking to an agent,</p>
 				<ul>
-					<li>I follow a strict approach: <strong>I never commit code written by AI that I do not understand. </strong> This also implies that I'm always reading the code I commit.</li>
+					<li>I follow a strict approach: <strong>I never commit code written by AI that I do not understand. </strong> This also implies that I'm always reading the code I commit. I'm working along this approach in my day job, in my side projects and on this personal site.</li>
 					<li>I'm not a native English speaker, so I occasionally use LLM-assistance for double-checking certain grammar structures or wording choices. Never feeding it a whole text for re-working or letting it be creative for me.</li>
-					<li>You will not see AI-generated posts on this page.</li>
+					<li>You will not see any AI-generated posts on this page.</li>
 				</ul>
 			</section>
     </div>
@@ -79,4 +82,10 @@ import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 		background-image: url("./media/icons8-heart.svg?url")
 		background-repeat: no-repeat
 		margin-right: 15px
+
+	.likes-list li.bug:before
+		background-image: url("./media/FluentEmojiFlatLadyBeetle.svg?url")
+		width: 30px
+		height: 30px
+		transform: rotate(40deg)
 </style>
