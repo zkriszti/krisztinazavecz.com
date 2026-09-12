@@ -1,11 +1,9 @@
 ---
 const menuItems = [
   {name: 'Blog', target: "/blog"},
-  /* {name: 'AI', target: "/ai"}, */
   {name: 'About', target: "/"},
 ]
 const currentPath = Astro.url.pathname;
-const inactivePages = menuItems.filter(item => item.target !== currentPath);
 ---
 <nav>
   {menuItems.map(p => (
