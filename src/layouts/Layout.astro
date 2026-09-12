@@ -28,7 +28,12 @@ const { pageTitle, pageDescription } = Astro.props;
 </html>
 
 <style lang="stylus">
+html
+  height: 100%
 body
+  height: 100%
+  display: flex
+  flex-direction: column
   max-width: 100%
   margin:0
   padding:0
@@ -36,6 +41,7 @@ body
   color: #444
   box-sizing: border-box
   main
+    flex-grow: 1
     max-width: clamp(280px, calc(100% - 2em), 60rem)
     margin: 0 auto 40px auto
     padding: 0 20px
