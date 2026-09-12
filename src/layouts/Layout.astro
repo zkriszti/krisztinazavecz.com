@@ -7,9 +7,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 interface Props {
   pageTitle: string;
   pageDescription: string;
+  withoutHeading?: boolean;
 }
 
-const { pageTitle, pageDescription } = Astro.props;
+const { pageTitle, pageDescription, withoutHeading = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +21,7 @@ const { pageTitle, pageDescription } = Astro.props;
 	<body>
 		<Header />
     <main class="app-inner">
-      <h1>{pageTitle}</h1>
+      {!withoutHeading && <h1>{pageTitle}</h1>}
       <slot />
     </main>
     <Footer />
