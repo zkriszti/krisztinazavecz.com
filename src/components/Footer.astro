@@ -3,8 +3,8 @@ const today = new Date();
 ---
 
 <footer>
-	<p>&copy; 2019 - {today.getFullYear()} Krisztina Závecz. All rights reserved.</p>
-	<small>Icons by <a href="https://icons8.com">Icons8</a>, <a href="https://github.com/microsoft/fluentui-emoji">Fluent Emoji Flat</a> and <a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome Free</a>.</small>
+	<p><span>&copy; 2019 - {today.getFullYear()} Krisztina Závecz.</span><span>All rights reserved.</span></p>
+	<small>Icons by <a href="https://icons8.com">Icons8</a>, <a href="https://github.com/microsoft/fluentui-emoji">Fluent Emoji Flat</a> and <a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome Free</a>. Favicon is a derivative work based on <a href="https://github.com/box-icons/boxicons-core/">Boxicons</a>.</small>
 </footer>
 <style>
 	footer {
@@ -12,6 +12,12 @@ const today = new Date();
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+		p {
+			display: flex;
+			gap: 1em;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 		a:link,
 		a:visited,
 		a:hover,
