@@ -4,10 +4,12 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import netlify from "@astrojs/netlify";
 
+import favicons from "astro-favicons";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://krisztinazavecz.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), favicons()],
   adapter: netlify(),
   fonts: [
     {
