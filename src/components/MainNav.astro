@@ -2,8 +2,12 @@
 const menuItems = [
   {name: 'Blog', target: "/blog"},
   {name: 'About', target: "/"},
-]
-const currentPath = Astro.url.pathname;
+];
+
+const normalizePath = (path: string) =>
+  path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+
+const currentPath = normalizePath(Astro.url.pathname);
 ---
 <nav>
   {menuItems.map(p => (
