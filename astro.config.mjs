@@ -10,6 +10,7 @@ import favicons from "astro-favicons";
 export default defineConfig({
   site: "https://krisztinazavecz.com",
   integrations: [mdx(), sitemap(), favicons()],
+  output: "static",
   adapter: netlify(),
   fonts: [
     {
