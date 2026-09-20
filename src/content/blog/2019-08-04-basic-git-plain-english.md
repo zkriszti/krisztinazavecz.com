@@ -2,7 +2,7 @@
 title: Let's start a Git journey - Basic Git concepts in PLAIN English
 subtitle: "vol.1.: Snapshot-based logic explained through movement photography"
 pubDate: 2019.08.04
-blogImagePath: "journey.jpg"
+blogImagePath: "../media/journey.jpg"
 blog-image-credit: "Photo by Annie Spratt on Unsplash"
 blog-image-alt: "boy with a map in his hands"
 post_lg: en

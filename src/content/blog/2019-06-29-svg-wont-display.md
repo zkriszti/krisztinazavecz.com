@@ -1,7 +1,7 @@
 ---
 title: Quick troubleshooting handles for SVGs not displaying
 pubDate: 2019.07.06
-blogImagePath: "svg-code.jpg"
+blogImagePath: "../media/svg-code.jpg"
 blog-image-credit: "Photo by Florian Olivo on Unsplash"
 blog-image-alt: "code on screen"
 post_lg: en

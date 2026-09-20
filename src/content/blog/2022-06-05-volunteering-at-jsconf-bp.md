@@ -2,7 +2,7 @@
 title: Things I take home from volunteering at JSConf Budapest
 subtitle: ""
 pubDate: 2022.06.05
-blogImagePath: "love_jsconf.jpg"
+blogImagePath: "../media/love_jsconf.jpg"
 blog-image-credit: "Photo by Ryan 'O' Niel on Unsplash"
 blog-image-alt: "red heart in front of a light blue background"
 post_lg: en

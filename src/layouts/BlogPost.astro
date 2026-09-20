@@ -15,7 +15,7 @@ const { title, pubDate, updatedDate, blogImagePath: heroImage } = Astro.props;
 <Layout pageTitle={title} pageDescription={`Blog by Krisztina Závecz | ${title}`} withoutHeading>
 	<article>
 		<div class="hero-image">
-			{heroImage && <Image src={`/src/content/media/${heroImage}`} alt="" width="720" height="360" />}
+			{heroImage && <Image src={heroImage} alt="" width="720" height="360" />}
 		</div>
 		<div class="prose">
 			<div class="title">
