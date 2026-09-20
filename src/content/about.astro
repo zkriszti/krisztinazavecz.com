@@ -11,7 +11,7 @@ import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 				<p>While working with modern frameworks both at my day-job (React and its ecosystem + TypeScript) and on my side projects (Vue, mostly), the one field that amazes me most is definitely CSS and the way it allows us to ship less JavaScript with each passing day.</p>
 			</section>
       <section class="about-me">
-        <Image alt="Krisztina Závecz" src={imgReference_zk} width="135" />
+        <Image alt="Krisztina Závecz" src={imgReference_zk} width="135" style="transform: rotate(-9deg)" />
         <ul class="likes-list">
           <li><span>I love creating. I find joy in revealing pieces of knowledge I haven't had before.</span></li>
           <li class="bug"><span>I love the feeling of finally resolving a bug. :)</span></li>
@@ -49,6 +49,7 @@ import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 		background: #eee
 		padding: 6px 12px
 		box-shadow: 2px 2px 5px 0px #44618999
+		overflow: clip; /* Stylus can't parse this without semi-colons */
 		@media screen and (min-width: 400px)
 			display: grid
 			grid-template-columns: 135px auto
@@ -63,9 +64,11 @@ import imgReference_zk from './media/zaveczkrisztina_small.jpg';
 
 	.likes-list
 		list-style-type: none
+		padding-inline-start: 0
+		@media screen and (min-width: 568px)
+			padding-inline-start: revert
 
 	li
-		padding-left: 20px
 		margin-bottom: 8px
 
 	.likes-list li
